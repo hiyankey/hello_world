@@ -1,10 +1,15 @@
 
-
+pub mod lib;
 fn main(){
     println!("Hello world!");
-    test_func();
+    // test_func();
+   let result =  lib::utils::get_full_name("Emmanuel","Yankey");
+   println!("{}", result);
+   println!("{}", lib::db::query("GET"))
 }
 
+
+#[allow(dead_code)]
 fn test_func(){
 
     let x:f32 = 225.0;
@@ -25,7 +30,10 @@ let char: char = '🔥';
     let point: (i32, u32) = (-1,4);
 println!("{:?}", point);
 
-let arr: [i16; 3] = [12, 45, 34];
+let arr: [i16; 6] = [12, 45, 34, 23, 12, 12];
 
-println!("{:?}", arr)
+println!("{:?}", arr);
+let new_arr: &[i16] = &arr[0..=5];
+
+println!("{:?}", new_arr);
 }
