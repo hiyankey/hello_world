@@ -8,9 +8,41 @@ fn main() {
 
     // test_if();
 
-    test_while() 
+    // test_while()
+
+    // test_loop(); 
+    test_for();
 }
 
+fn test_for(){
+let arr = [12,19, 17, 29,36];
+let age_to_drive = 18i32;
+
+for age in arr {
+    println!("Your current age is {0}", age);
+    if age > age_to_drive {
+        println!("You are eligible to drive")
+    } else {
+        println!("You are not eligible yo drive")
+    }
+}
+}
+
+
+#[allow(dead_code)]
+fn test_loop(){
+let mut x =  0u8;
+loop {
+    println!("Hello from 🦀🦀🦀");
+    if x > 10 {
+        break;
+    };
+    x += 1
+};
+
+}
+
+#[allow(dead_code)]
 fn test_while() {
 let drivers_age = 18u8;
 let mut current_age = 0u8; 
