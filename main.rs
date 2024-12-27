@@ -1,4 +1,7 @@
 // pub mod lib;
+// pub mod closures;
+// pub mod matchtest;
+pub mod optiontest;
 fn main() {
     println!("Hello world!");
     // test_func();
@@ -11,9 +14,19 @@ fn main() {
     // test_while()
 
     // test_loop(); 
-    test_for();
-}
+    // test_for();
+    // closures::test_closures();
+    // matchtest::test_match();
+    let result = optiontest::test_option_arch();
+    if result.is_some() {
+        println!("User has selected an option");
+        println!("{}", result.unwrap().to_string());
+    } else {
+        println!("User has selected None")
+    }
 
+}
+#[allow(dead_code)]
 fn test_for(){
 let arr = [12,19, 17, 29,36];
 let age_to_drive = 18i32;
